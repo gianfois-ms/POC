@@ -9,6 +9,8 @@ import XCTest
 @testable import POC
 
 final class POCTests: XCTestCase {
+    
+    let mockViewModel = POCViewModel()
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -31,6 +33,10 @@ final class POCTests: XCTestCase {
         self.measure {
             // Put the code you want to measure the time of here.
         }
+    }
+    
+    func testContentViewText() {
+        XCTAssertEqual(mockViewModel.text, "Hello world")
     }
 
 }
